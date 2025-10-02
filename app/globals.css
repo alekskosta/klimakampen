@@ -15,10 +15,6 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-main {
-  min-height: 0;
-}
-
 .link {
   text-decoration: none;
 }
@@ -29,4 +25,21 @@ main {
 
 .link:focus-visible {
   outline: 2px solid black;
+}
+
+.page-titles {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.climateSection {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2.5rem;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

@@ -10,7 +10,7 @@ export default function HeroSection() {
         utslipp og bygge en bærekraftig fremtid – for oss selv og kommende
         generasjoner.
       </p>
-      <Link href="/" className="link">
+      <Link href="/klimatiltak" className="link">
         Bli med i kampen
       </Link>
     </section>

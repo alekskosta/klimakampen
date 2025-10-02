@@ -11,7 +11,7 @@ export default function Header() {
       <nav>
         <ul className={styles.nav}>
           <li>
-            <Link href="/" className="link">
+            <Link href="/klimatiltak" className="link">
               Klimatiltak
             </Link>
           </li>
