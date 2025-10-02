@@ -13,15 +13,3 @@
   gap: 1.25rem;
   list-style: none;
 }
-
-.link {
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.link:focus-visible {
-  outline: 2px solid black;
-}

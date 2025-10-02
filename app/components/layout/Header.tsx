@@ -4,26 +4,26 @@ import styles from "./Header.module.css";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <Link href="/" className={styles.link}>
+      <Link href="/" className="link">
         Klimakampen
       </Link>
 
       <nav>
         <ul className={styles.nav}>
           <li>
-            <Link href="/" className={styles.link}>
+            <Link href="/" className="link">
               Klimatiltak
             </Link>
           </li>
 
           <li>
-            <Link href="/" className={styles.link}>
+            <Link href="/" className="link">
               Klima-verstinger
             </Link>
           </li>
 
           <li>
-            <Link href="/" className={styles.link}>
+            <Link href="/" className="link">
               Klimakalkulator
             </Link>
           </li>
