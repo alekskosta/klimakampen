@@ -23,7 +23,11 @@ export default function ClimateActionCard({ items }: Props) {
 
             <h2>{item.title}</h2>
             <p>{item.summary}</p>
-            <Link href="/" className="link">
+            <Link
+              href={`/klimatiltak/${item.slug}`}
+              className="link"
+              aria-label={`Les mer om ${item.title}`}
+            >
               Les mer her
             </Link>
           </article>

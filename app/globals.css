@@ -28,8 +28,16 @@ body {
 }
 
 .page-titles {
-  padding: 1.25rem;
+  padding: 2.5rem;
   text-align: center;
+}
+
+.page-link {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  padding: 1.25rem;
+  border: 1px solid black;
 }
 
 .climateSection {
