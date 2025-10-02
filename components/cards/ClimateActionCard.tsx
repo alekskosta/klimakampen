@@ -18,7 +18,6 @@ export default function ClimateActionCard({ items }: Props) {
               alt={item.title}
               width={600}
               height={600}
-              className="img"
               priority={true}
             />
 
