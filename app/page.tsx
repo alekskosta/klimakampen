@@ -1,10 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import HeroSection from "./components/sections/HeroSection";
 
 export default function Home() {
-  return (
-    <main>
-      <h1>HERO</h1>
-    </main>
-  );
+  return <HeroSection />;
 }
