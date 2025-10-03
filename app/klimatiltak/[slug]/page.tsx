@@ -18,13 +18,12 @@ export default async function ClimateActionPage({ params }: Props) {
     );
   } else
     return (
-      <section className={styles.sectionAction}>
-        <h1 className="page-titles">{action.title}</h1>
-        <Link href="/klimatiltak" className="page-link">
-          Tilbake
-        </Link>
+      <article className={styles.actionArticle}>
+        <header>
+          <h1 className="page-titles">{action.title}</h1>
+        </header>
 
-        <article className={styles.actionArticle}>
+        <figure>
           <Image
             src={action.image}
             alt={action.title}
@@ -32,8 +31,32 @@ export default async function ClimateActionPage({ params }: Props) {
             height={600}
             priority={true}
           />
+        </figure>
+
+        <section>
+          <h2 className={styles.underTitle}>{action.bodyTitle}</h2>
           <p>{action.body}</p>
-        </article>
-      </section>
+        </section>
+
+        {action.sections.map((sec) => (
+          <section key={sec.id} aria-labelledby={sec.id}>
+            <h2 id={sec.id} className={styles.underTitle}>
+              {sec.title}
+            </h2>
+            <p>{sec.text}</p>
+            <ul className={styles.underList}>
+              {sec.bullets.map((bul) => (
+                <li key={bul.id}>{bul.text}</li>
+              ))}
+            </ul>
+          </section>
+        ))}
+
+        <footer>
+          <Link href="/klimatiltak" className="page-link">
+            Tilbake
+          </Link>
+        </footer>
+      </article>
     );
 }
