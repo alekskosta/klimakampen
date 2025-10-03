@@ -1,0 +1,11 @@
+.table {
+  border: 1px solid grey;
+  padding: 2.5rem;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.head {
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+}

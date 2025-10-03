@@ -17,7 +17,7 @@ export default function Header() {
           </li>
 
           <li>
-            <Link href="/" className="link">
+            <Link href="/klima-verstinger" className="link">
               Klima-verstinger
             </Link>
           </li>

@@ -450,3 +450,49 @@ Når vi handler sammen lokalt, skaper vi kulturendring, bedre løsninger og pres
 export function showInfo(): Actions[] {
   return CLIMATEACTIONS;
 }
+
+// ---------------------------------
+
+export type CO2_Worst_Country = {
+  id: string;
+  country: string;
+  co2PerPerson: number;
+  year: number;
+};
+
+const TOP20_CO2_PER_CAPITA_2023: CO2_Worst_Country[] = [
+  { id: "PLW", country: "Palau", co2PerPerson: 62.59, year: 2023 },
+  { id: "QAT", country: "Qatar", co2PerPerson: 43.55, year: 2023 },
+  { id: "KWT", country: "Kuwait", co2PerPerson: 24.9, year: 2023 },
+  { id: "BRN", country: "Brunei", co2PerPerson: 21.12, year: 2023 },
+  { id: "BHR", country: "Bahrain", co2PerPerson: 20.7, year: 2023 },
+  {
+    id: "ARE",
+    country: "United Arab Emirates",
+    co2PerPerson: 20.22,
+    year: 2023,
+  },
+  {
+    id: "TTO",
+    country: "Trinidad and Tobago",
+    co2PerPerson: 19.71,
+    year: 2023,
+  },
+  { id: "SAU", country: "Saudi Arabia", co2PerPerson: 17.15, year: 2023 },
+  { id: "OMN", country: "Oman", co2PerPerson: 17.11, year: 2023 },
+  { id: "CAN", country: "Canada", co2PerPerson: 14.91, year: 2023 },
+  { id: "RUS", country: "Russia", co2PerPerson: 14.45, year: 2023 },
+  { id: "AUS", country: "Australia", co2PerPerson: 14.21, year: 2023 },
+  { id: "USA", country: "United States", co2PerPerson: 13.83, year: 2023 },
+  { id: "SYC", country: "Seychelles", co2PerPerson: 12.76, year: 2023 },
+  { id: "KAZ", country: "Kazakhstan", co2PerPerson: 12.43, year: 2023 },
+  { id: "TWN", country: "Taiwan", co2PerPerson: 11.68, year: 2023 },
+  { id: "LUX", country: "Luxembourg", co2PerPerson: 11.18, year: 2023 },
+  { id: "KOR", country: "South Korea", co2PerPerson: 11.04, year: 2023 },
+  { id: "TKM", country: "Turkmenistan", co2PerPerson: 10.51, year: 2023 },
+  { id: "SGP", country: "Singapore", co2PerPerson: 9.38, year: 2023 },
+];
+
+export default function showCountryInfo(): CO2_Worst_Country[] {
+  return TOP20_CO2_PER_CAPITA_2023;
+}
