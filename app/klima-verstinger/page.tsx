@@ -1,3 +1,4 @@
+import Co2PerPersonChart from "@/components/emissions/Co2PerPersonChart";
 import CO2PerPersonTable from "@/components/emissions/CO2PerPersonTable";
 
 export default function KlimaVerstinger() {
@@ -5,6 +6,7 @@ export default function KlimaVerstinger() {
     <>
       <h1 className="page-titles">Info om klima-verstinger</h1>
       <CO2PerPersonTable />
+      <Co2PerPersonChart />
     </>
   );
 }
