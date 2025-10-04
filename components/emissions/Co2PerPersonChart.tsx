@@ -5,6 +5,7 @@ import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 import { ChartLegend, ChartLegendContent } from "@/components/ui/chart";
 import showCountryInfo from "@/data/info";
+import styles from "./Co2PerPersonChart.module.css";
 
 const data = showCountryInfo();
 
@@ -17,7 +18,7 @@ const chartConfig = {
 
 export default function Co2PerPersonChart() {
   return (
-    <ChartContainer config={chartConfig} className="h-[260px] w-full">
+    <ChartContainer config={chartConfig} className={styles.container}>
       <BarChart accessibilityLayer data={data}>
         <CartesianGrid vertical={false} />
         <XAxis
