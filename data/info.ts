@@ -1,3 +1,5 @@
+// --------------------------------- Klimatiltak
+
 export type Bullets = {
   id: string;
   text: string;
@@ -451,7 +453,7 @@ export function showInfo(): Actions[] {
   return CLIMATEACTIONS;
 }
 
-// ---------------------------------
+// --------------------------------- Klima-verstinger
 
 export type CO2_Worst_Country = {
   id: string;
@@ -493,6 +495,99 @@ const TOP20_CO2_PER_CAPITA_2023: CO2_Worst_Country[] = [
   { id: "SGP", country: "Singapore", co2PerPerson: 9.38, year: 2023 },
 ];
 
-export default function showCountryInfo(): CO2_Worst_Country[] {
+export function showCountryInfo(): CO2_Worst_Country[] {
   return TOP20_CO2_PER_CAPITA_2023;
+}
+
+// --------------------------------- Klimakalkulator
+
+export type Option = { label: string; value: number };
+export type Question =
+  | { id: "home"; title: string; options: Option[] }
+  | {
+      id: "car";
+      title: string;
+      kmBands: Array<{
+        label: string;
+        ev: number;
+        hybrid: number;
+        ice: number;
+      }>;
+    }
+  | {
+      id: "flight";
+      title: string;
+      factors: { short: number; medium: number; long: number };
+    }
+  | {
+      id: "diet" | "goods" | "services" | "public";
+      title: string;
+      options: Option[];
+    };
+
+const QUESTIONS: Question[] = [
+  {
+    id: "home",
+    title: "Bolig: strøm/oppvarming",
+    options: [
+      { label: "≤ 6 000 kWh", value: 0.8 },
+      { label: "6–12 000 kWh (gj.sn.)", value: 1.3 }, // default
+      { label: "12–20 000 kWh", value: 1.6 },
+      { label: "≥ 20 000 kWh", value: 2.2 },
+    ],
+  },
+  {
+    id: "car",
+    title: "Bilkjøring (km/år + biltype)",
+    kmBands: [
+      { label: "0–2 000", ev: 0.03, hybrid: 0.15, ice: 0.35 },
+      { label: "2–8 000", ev: 0.1, hybrid: 0.6, ice: 2.0 }, // default (ICE)
+      { label: "8–15 000", ev: 0.2, hybrid: 1.1, ice: 3.0 },
+      { label: "15 000+", ev: 0.35, hybrid: 1.7, ice: 4.2 },
+    ],
+  },
+  {
+    id: "flight",
+    title: "Flyreiser pr år",
+    factors: { short: 0.25, medium: 0.6, long: 1.6 }, // t per tur/retur
+  },
+  {
+    id: "diet",
+    title: "Kosthold",
+    options: [
+      { label: "Kjøttrikt", value: 2.4 },
+      { label: "Gjennomsnitt", value: 1.7 }, // default
+      { label: "Lite kjøtt", value: 1.2 },
+      { label: "Vegetar", value: 1.0 },
+      { label: "Vegan", value: 0.8 },
+    ],
+  },
+  {
+    id: "goods",
+    title: "Varer/innkjøp (kr/år)",
+    options: [
+      { label: "< 20 000", value: 0.5 },
+      { label: "20–40 000", value: 0.9 }, // default
+      { label: "40–80 000", value: 1.3 },
+      { label: "> 80 000", value: 1.8 },
+    ],
+  },
+  {
+    id: "services",
+    title: "Tjenester & digitalt",
+    options: [
+      { label: "Lavt", value: 0.3 },
+      { label: "Middels", value: 0.5 }, // default
+      { label: "Høyt", value: 0.8 },
+    ],
+  },
+  {
+    id: "public",
+    title: "Offentlige tjenester (fast andel)",
+    options: [{ label: "Per person", value: 0.5 }], // default
+  },
+];
+
+export function showClimateQuestionsInfo(): Question[] {
+  return QUESTIONS;
 }

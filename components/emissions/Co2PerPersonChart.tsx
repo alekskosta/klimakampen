@@ -4,10 +4,12 @@ import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
 import { ChartLegend, ChartLegendContent } from "@/components/ui/chart";
-import showCountryInfo from "@/data/info";
+import { showCountryInfo } from "@/data/info";
 import styles from "./Co2PerPersonChart.module.css";
 
 const data = showCountryInfo();
+
+// Chart komponent fra shadcn
 
 const chartConfig = {
   co2PerPerson: {

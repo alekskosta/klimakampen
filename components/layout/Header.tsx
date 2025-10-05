@@ -23,7 +23,7 @@ export default function Header() {
           </li>
 
           <li>
-            <Link href="/" className="link">
+            <Link href="/klimakalkulator" className="link">
               Klimakalkulator
             </Link>
           </li>

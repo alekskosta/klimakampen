@@ -7,8 +7,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import showCountryInfo from "@/data/info";
+import { showCountryInfo } from "@/data/info";
 import styles from "./Co2PerPersonTable.module.css";
+
+// Table komponent fra shadcn
 
 export default function CO2PerPersonTable() {
   const rows = [...showCountryInfo()].sort(

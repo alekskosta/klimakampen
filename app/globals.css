@@ -36,6 +36,13 @@ body {
   font-size: 2rem;
 }
 
+.text {
+  max-width: 780px;
+  margin-inline: auto;
+  padding: 0px 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .page-link {
   display: block;
   width: max-content;
@@ -54,6 +61,14 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.button {
+  display: block;
+  margin-inline: auto;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 @layer base {
