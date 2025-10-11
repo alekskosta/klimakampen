@@ -13,6 +13,14 @@ export default function Header() {
     setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    if (open) window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
     <header className={styles.header}>
       <Link href="/" className="link">
@@ -21,14 +29,16 @@ export default function Header() {
 
       <nav>
         <button
+          type="button"
           className={styles.burger}
-          aria-label="meny"
+          aria-label={open ? "Lukk meny" : "Åpne meny"}
           aria-expanded={open}
           onClick={() => setOpen((prev) => !prev)}
+          aria-controls="meny"
         >
-          {open ? "X" : "☰"}
+          <span aria-hidden="true">{open ? "X" : "☰"}</span>
         </button>
-        <ul className={`${styles.nav} ${open ? styles.show : ""}`}>
+        <ul id="meny" className={`${styles.nav} ${open ? styles.show : ""}`}>
           <li>
             <Link href="/klimatiltak" className="link">
               Klimatiltak
