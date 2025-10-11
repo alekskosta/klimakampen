@@ -1,0 +1,24 @@
+.form {
+  max-width: 780px;
+  margin-inline: auto;
+  border: 1px solid black;
+  padding: 2.5rem;
+}
+
+.label {
+  border: 0.5px solid black;
+  display: flex;
+  padding: 1.25rem;
+  cursor: pointer;
+  gap: 1.25rem;
+}
+
+.label:hover {
+  background-color: grey;
+}
+
+.btnAndText {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1.25rem 0;
+}

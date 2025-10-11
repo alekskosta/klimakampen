@@ -502,92 +502,119 @@ export function showCountryInfo(): CO2_Worst_Country[] {
 // --------------------------------- Klimakalkulator
 
 export type Option = { label: string; value: number };
-export type Question =
-  | { id: "home"; title: string; options: Option[] }
-  | {
-      id: "car";
-      title: string;
-      kmBands: Array<{
-        label: string;
-        ev: number;
-        hybrid: number;
-        ice: number;
-      }>;
-    }
-  | {
-      id: "flight";
-      title: string;
-      factors: { short: number; medium: number; long: number };
-    }
-  | {
-      id: "diet" | "goods" | "services" | "public";
-      title: string;
-      options: Option[];
-    };
+export type AnswerId =
+  | "home"
+  | "car"
+  | "flight"
+  | "diet"
+  | "goods"
+  | "services"
+  | "waste";
 
-const QUESTIONS: Question[] = [
+export type Question = {
+  id: AnswerId;
+  title: string;
+  options: Option[];
+  defaultIndex: number; // hvilket alternativ som er standard (midt)
+};
+
+export const QUESTIONS: Question[] = [
   {
     id: "home",
     title: "Bolig: strøm/oppvarming",
+    defaultIndex: 2,
     options: [
-      { label: "≤ 6 000 kWh", value: 0.8 },
-      { label: "6–12 000 kWh (gj.sn.)", value: 1.3 }, // default
-      { label: "12–20 000 kWh", value: 1.6 },
-      { label: "≥ 20 000 kWh", value: 2.2 },
+      { label: "Svært lavt (≤ 5 000 kWh)", value: 0.6 },
+      { label: "Lavt (5–8 000 kWh)", value: 1.0 },
+      { label: "Vanlig (8–12 000 kWh)", value: 1.3 }, // default
+      { label: "Høyt (12–18 000 kWh)", value: 1.6 },
+      { label: "Svært høyt (≥ 18 000 kWh)", value: 2.2 },
     ],
   },
   {
     id: "car",
-    title: "Bilkjøring (km/år + biltype)",
-    kmBands: [
-      { label: "0–2 000", ev: 0.03, hybrid: 0.15, ice: 0.35 },
-      { label: "2–8 000", ev: 0.1, hybrid: 0.6, ice: 2.0 }, // default (ICE)
-      { label: "8–15 000", ev: 0.2, hybrid: 1.1, ice: 3.0 },
-      { label: "15 000+", ev: 0.35, hybrid: 1.7, ice: 4.2 },
+    title: "Bilbruk i året",
+    defaultIndex: 2,
+    options: [
+      { label: "Ingen / nesten ikke (0–2 000 km)", value: 0.0 },
+      { label: "Lite (2–5 000 km)", value: 1.0 },
+      { label: "Middels (5–10 000 km)", value: 2.0 }, // default
+      { label: "Mye (10–15 000 km)", value: 3.0 },
+      { label: "Svært mye (≥ 15 000 km)", value: 4.0 },
     ],
   },
   {
     id: "flight",
-    title: "Flyreiser pr år",
-    factors: { short: 0.25, medium: 0.6, long: 1.6 }, // t per tur/retur
+    title: "Flyreiser i året",
+    defaultIndex: 2,
+    options: [
+      { label: "Ingen", value: 0.0 },
+      { label: "Få (1 kort t/r)", value: 0.6 },
+      { label: "Noen (2 korte eller 1 middels t/r)", value: 1.2 }, // default
+      { label: "Mange (3–4 korte eller 1 lang t/r)", value: 2.0 },
+      { label: "Svært mange (flere langdistanse årlig)", value: 3.2 },
+    ],
   },
   {
     id: "diet",
     title: "Kosthold",
+    defaultIndex: 2,
     options: [
-      { label: "Kjøttrikt", value: 2.4 },
+      { label: "Vegan / mest plantebasert", value: 0.8 },
+      { label: "Mye plantebasert", value: 1.2 },
       { label: "Gjennomsnitt", value: 1.7 }, // default
-      { label: "Lite kjøtt", value: 1.2 },
-      { label: "Vegetar", value: 1.0 },
-      { label: "Vegan", value: 0.8 },
+      { label: "Mye kjøtt", value: 2.1 },
+      { label: "Svært kjøttrikt", value: 2.6 },
     ],
   },
   {
     id: "goods",
-    title: "Varer/innkjøp (kr/år)",
+    title: "Varer/innkjøp (klær, elektronikk m.m.)",
+    defaultIndex: 2,
     options: [
-      { label: "< 20 000", value: 0.5 },
-      { label: "20–40 000", value: 0.9 }, // default
-      { label: "40–80 000", value: 1.3 },
-      { label: "> 80 000", value: 1.8 },
+      { label: "Svært lavt forbruk", value: 0.3 },
+      { label: "Lavt forbruk", value: 0.6 },
+      { label: "Middels", value: 0.9 }, // default
+      { label: "Høyt", value: 1.1 },
+      { label: "Svært høyt", value: 1.5 },
     ],
   },
   {
     id: "services",
     title: "Tjenester & digitalt",
+    defaultIndex: 2,
     options: [
-      { label: "Lavt", value: 0.3 },
-      { label: "Middels", value: 0.5 }, // default
+      { label: "Svært lavt", value: 0.2 },
+      { label: "Lavt", value: 0.4 },
+      { label: "Middels", value: 0.6 }, // default
       { label: "Høyt", value: 0.8 },
+      { label: "Svært høyt", value: 1.0 },
     ],
   },
   {
-    id: "public",
-    title: "Offentlige tjenester (fast andel)",
-    options: [{ label: "Per person", value: 0.5 }], // default
+    id: "waste",
+    title: "Avfall & gjenbruk",
+    defaultIndex: 2,
+    options: [
+      { label: "Nesten null / svært bevisst", value: 0.05 },
+      { label: "Lavt (god sortering/gjenbruk)", value: 0.2 },
+      { label: "Vanlig", value: 0.3 }, // default
+      { label: "Høyt avfall", value: 0.4 },
+      { label: "Svært høyt avfall", value: 0.6 },
+    ],
   },
 ];
 
-export function showClimateQuestionsInfo(): Question[] {
+export type DefaultAnswers = Record<AnswerId, number>;
+
+export const DEFAULT_ANSWERS: DefaultAnswers = Object.fromEntries(
+  QUESTIONS.map((q) => [q.id, q.options[q.defaultIndex].value])
+) as DefaultAnswers;
+
+export function showQuestions(): Question[] {
   return QUESTIONS;
+}
+
+export function showDefaultAnswers(): DefaultAnswers {
+  return DEFAULT_ANSWERS;
 }

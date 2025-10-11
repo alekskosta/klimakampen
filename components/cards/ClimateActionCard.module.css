@@ -1,7 +1,8 @@
 .gridContainer {
+  max-width: 780px;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
 }
 
 .card {

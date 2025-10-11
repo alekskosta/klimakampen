@@ -1,0 +1,6 @@
+.welcome {
+  max-width: 780px;
+  margin-inline: auto;
+  border: 1px solid black;
+  padding: 2.5rem;
+}

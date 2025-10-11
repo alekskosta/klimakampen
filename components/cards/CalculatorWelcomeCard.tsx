@@ -1,0 +1,25 @@
+import styles from "./CalculatorWelcomeCard.module.css";
+
+export default function CalculatorWelcomeCard({
+  onStart,
+}: {
+  onStart: () => void;
+}) {
+  return (
+    <section
+      className={styles.welcome}
+      aria-labelledby="welcome-title"
+      aria-describedby="welcome-desc"
+    >
+      <h1 id="welcome-title">Test vår klimakalkulator</h1>
+      <p id="welcome-desc">
+        Ta testen vår – 7 kjappe spørsmål (ca. 1 min). Du sammenlignes med
+        snittet i Norge (≈ <strong>8,0 t CO₂e/år</strong>). Ingen innlogging –
+        bare rett på sak.
+      </p>
+      <button type="button" onClick={onStart}>
+        Start testen
+      </button>
+    </section>
+  );
+}

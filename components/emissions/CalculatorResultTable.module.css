@@ -1,0 +1,14 @@
+.table {
+  border: 1px solid grey;
+  padding: 2.5rem;
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
