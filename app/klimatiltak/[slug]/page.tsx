@@ -2,6 +2,7 @@ import { showInfo } from "@/data/info";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -11,11 +12,7 @@ export default async function ClimateActionPage({ params }: Props) {
   const { slug } = await params;
   const action = showInfo().find((act) => act.slug === slug);
   if (!action) {
-    return (
-      <article>
-        <h1>Ooops, denne siden finnes ikke</h1>
-      </article>
-    );
+    return notFound();
   } else
     return (
       <article className={styles.actionArticle}>
