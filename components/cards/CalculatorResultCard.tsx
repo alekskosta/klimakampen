@@ -43,10 +43,10 @@ export default function CalculatorResultCard({
         </Link>
         .
       </p>
-      <button type="button" onClick={onRestart}>
+      <CalculatorResultTable rows={rows} />
+      <button type="button" onClick={onRestart} className="button">
         Beregn på nytt!
       </button>
-      <CalculatorResultTable rows={rows} />
     </section>
   );
 }
