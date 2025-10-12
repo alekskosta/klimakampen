@@ -13,7 +13,7 @@ const data = showCountryInfo();
 
 const chartConfig = {
   co2PerPerson: {
-    label: "Country",
+    label: "CO₂ pr. person (tonn)",
     color: "#2563eb",
   },
 } satisfies ChartConfig;
