@@ -11,7 +11,7 @@ export default function CalculatorWelcomeCard({
       aria-labelledby="welcome-title"
       aria-describedby="welcome-desc"
     >
-      <h1 id="welcome-title">Test vår klimakalkulator</h1>
+      <h2 id="welcome-title">Test vår klimakalkulator</h2>
       <p id="welcome-desc">
         Ta testen vår – 7 kjappe spørsmål (ca. 1 min). Du sammenlignes med
         snittet i Norge (≈ <strong>8,0 t CO₂e/år</strong>). Ingen innlogging –

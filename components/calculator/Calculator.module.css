@@ -1,12 +1,11 @@
 .form {
-  max-width: 780px;
+  max-width: 798px;
   margin-inline: auto;
   border: 1px solid black;
   padding: 2.5rem;
 }
 
 .label {
-  border: 0.5px solid black;
   display: flex;
   padding: 1.25rem;
   cursor: pointer;

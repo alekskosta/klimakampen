@@ -13,6 +13,7 @@ type Row = {
   activity: string;
   userValue: number;
   avgValue: number;
+  unit?: string;
 };
 
 export default function CalculatorResultTable({ rows }: { rows: Row[] }) {

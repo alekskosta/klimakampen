@@ -59,20 +59,24 @@ export default function Calculator() {
       <p>
         Spørsmål {step + 1} / {QUESTIONS.length}
       </p>
-      <h2>{question.title}</h2>
 
-      {question.options.map((opt) => (
-        <label key={opt.label} className={styles.label}>
-          <input
-            type="radio"
-            name={question.id}
-            className={styles.radio}
-            checked={ans[question.id] === opt.value}
-            onChange={() => choose(question.id, opt.value)}
-          />{" "}
-          {opt.label}
-        </label>
-      ))}
+      <h2>{question.title}</h2>
+      <fieldset className={styles.group}>
+        <legend className="sr-only">{question.title}</legend>
+
+        {question.options.map((opt) => (
+          <label key={opt.label} className={styles.label}>
+            <input
+              type="radio"
+              name={question.id}
+              className={styles.radio}
+              checked={ans[question.id] === opt.value}
+              onChange={() => choose(question.id, opt.value)}
+            />{" "}
+            {opt.label}
+          </label>
+        ))}
+      </fieldset>
 
       <div className={styles.btnAndText}>
         <button type="button" onClick={prev} disabled={first}>
@@ -80,7 +84,9 @@ export default function Calculator() {
         </button>
         <button type="submit">{last ? "Vis resultat" : "Neste"}</button>
       </div>
-      <span>Ditt forbruk nå: {totalProgress().toFixed(2)} t CO₂e/år</span>
+      <span aria-live="polite" role="status">
+        Ditt forbruk nå: {totalProgress().toFixed(2)} t CO₂e/år
+      </span>
     </form>
   );
 }
