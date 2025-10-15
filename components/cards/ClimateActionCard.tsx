@@ -14,6 +14,7 @@ export default function ClimateActionCard({ items }: Props) {
         return (
           <article key={item.id} className={styles.card}>
             <Image
+              className={styles.climateImage}
               src={item.image}
               alt={item.title}
               width={600}
@@ -21,15 +22,18 @@ export default function ClimateActionCard({ items }: Props) {
               priority={true}
             />
 
-            <h2>{item.title}</h2>
+            <h2 className={styles.climateTitle}>{item.title}</h2>
+
             <p>{item.summary}</p>
-            <Link
-              href={`/klimatiltak/${item.slug}`}
-              className="link"
-              aria-label={`Les mer om ${item.title}`}
-            >
-              Les mer her
-            </Link>
+            <div>
+              <Link
+                href={`/klimatiltak/${item.slug}`}
+                className="buttonLink"
+                aria-label={`Les mer om ${item.title}`}
+              >
+                Les mer her
+              </Link>
+            </div>
           </article>
         );
       })}

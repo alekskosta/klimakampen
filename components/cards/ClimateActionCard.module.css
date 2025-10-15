@@ -6,10 +6,23 @@
 }
 
 .card {
+  position: relative;
+  z-index: 10;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 1rem;
+  gap: 1.25rem;
   padding: 2.5rem;
-  border: 1px solid #fd1d75;
   border: 5px solid #082b3f;
+  background-color: #010514;
+}
+
+.climateTitle {
+  text-decoration: underline;
+  text-decoration-color: #b94515;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.climateImage {
+  border-radius: 50%;
 }

@@ -15,45 +15,60 @@ export default async function ClimateActionPage({ params }: Props) {
     return notFound();
   } else
     return (
-      <article className={styles.actionArticle}>
-        <header>
-          <h1 className="page-titles">{action.title}</h1>
-        </header>
+      <section className={"slug-section"}>
+        <img
+          src="/ClimateImage/coldthree.png"
+          className="absolute5"
+          aria-hidden="true"
+        />
 
-        <figure>
-          <Image
-            src={action.image}
-            alt={action.title}
-            width={600}
-            height={600}
-            priority={true}
-          />
-        </figure>
+        <img
+          src="/ClimateImage/coldthree.png"
+          className="absolute6"
+          aria-hidden="true"
+        />
 
-        <section>
-          <h2 className={styles.underTitle}>{action.bodyTitle}</h2>
-          <p>{action.body}</p>
-        </section>
+        <article className={styles.actionArticle}>
+          <header>
+            <h1 className="page-titles">{action.title}</h1>
+          </header>
 
-        {action.sections.map((sec) => (
-          <section key={sec.id} aria-labelledby={sec.id}>
-            <h2 id={sec.id} className={styles.underTitle}>
-              {sec.title}
-            </h2>
-            <p>{sec.text}</p>
-            <ul className={styles.underList}>
-              {sec.bullets.map((bul) => (
-                <li key={bul.id}>{bul.text}</li>
-              ))}
-            </ul>
+          <figure>
+            <Image
+              className={styles.slugImage}
+              src={action.image}
+              alt={action.title}
+              width={600}
+              height={600}
+              priority={true}
+            />
+          </figure>
+
+          <section>
+            <h2 className={styles.underTitle}>{action.bodyTitle}</h2>
+            <p>{action.body}</p>
           </section>
-        ))}
 
-        <footer>
-          <Link href="/klimatiltak" className="page-link">
-            Tilbake
-          </Link>
-        </footer>
-      </article>
+          {action.sections.map((sec) => (
+            <section key={sec.id} aria-labelledby={sec.id}>
+              <h2 id={sec.id} className={styles.underTitle}>
+                {sec.title}
+              </h2>
+              <p>{sec.text}</p>
+              <ul className={styles.underList}>
+                {sec.bullets.map((bul) => (
+                  <li key={bul.id}>{bul.text}</li>
+                ))}
+              </ul>
+            </section>
+          ))}
+
+          <footer>
+            <Link href="/klimatiltak" className="buttonLink page-link">
+              Tilbake
+            </Link>
+          </footer>
+        </article>
+      </section>
     );
 }

@@ -11,7 +11,18 @@ export default function KlimaVerstinger() {
     setShow((prev) => !prev);
   }
   return (
-    <>
+    <section className="climate-worst">
+      <img
+        src="./ClimateImage/coldthree.png"
+        className="absolute5"
+        aria-hidden="true"
+      />
+
+      <img
+        src="./ClimateImage/coldthree.png"
+        className="absolute6"
+        aria-hidden="true"
+      />
       <h1 className="page-titles">Info om klima-verstinger</h1>
       <p className="text">
         CO₂-utslipp per person er et mål på hvor mye klimagasser (omregnet til
@@ -29,6 +40,6 @@ export default function KlimaVerstinger() {
       <button type="button" className="button" onClick={() => toggleShow()}>
         {show ? "Vis graf" : "Vis tabell"}
       </button>
-    </>
+    </section>
   );
 }

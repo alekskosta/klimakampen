@@ -24,17 +24,6 @@
   z-index: 10;
 }
 
-.heroLink {
-  text-decoration: none;
-  background-color: transparent;
-  border: 1px solid #b94515;
-  padding: 1rem 2rem;
-}
-
-.heroLink:hover {
-  background-color: #b94515;
-}
-
 .absolute5,
 .absolute6,
 .absolute7,

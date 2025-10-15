@@ -1,13 +1,24 @@
 .actionArticle {
+  position: relative;
+  z-index: 1;
   max-width: 780px;
   margin-inline: auto;
   padding: 0 2.5rem;
+  background-color: #010514;
 }
 
 .underTitle {
   padding: 0.5rem 0;
+  text-decoration: underline;
+  text-decoration-color: #b94515;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .underList {
   padding: 1.25rem;
+}
+
+.slugImage {
+  border-radius: 50%;
 }

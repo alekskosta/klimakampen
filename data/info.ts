@@ -29,9 +29,9 @@ const CLIMATEACTIONS: Actions[] = [
     id: "tt-001",
     slug: "spar-strom-hjemme",
     image: "/ClimateActionImages/spar_strom_hjemme.jpg",
-    title: "Spar strøm hjemme",
+    title: "Spar strøm",
     summary:
-      "Bytt til LED, trekk ut ladere, senk innetemperaturen og bruk tidsstyring. Små grep gir store kutt over tid.",
+      "Bytt til LED og senk innetemperaturen . Smarte tidsstyringer og tetting gir varige kutt og lavere regning.",
     bodyTitle: "Om tiltaket",
     body: `Start med de enkleste kuttene: bytt til LED-pærer og slå av lys i rom du ikke bruker. 
 Senk innetemperaturen 1–2 °C og bruk termostater eller tidsstyring på panelovner for å redusere unødig oppvarming. 
@@ -78,9 +78,9 @@ Over tid kan du vurdere smartstyring (termostater/smarte plugger) og bedre isola
     id: "tt-002",
     slug: "reis-gront-i-hverdagen",
     image: "/ClimateActionImages/reis_gront_i_hverdagen.jpg",
-    title: "Reis grønt i hverdagen",
+    title: "Reis grønt",
     summary:
-      "Gå, sykle eller ta kollektivt når du kan. Kombiner med bildeling ved behov for bil.",
+      "Gå, sykle eller ta kollektivt til hverdags. Kombiner ærend, bruk bildeling ved behov og velg digitale møter når det passer.",
     bodyTitle: "Om tiltaket",
     body: `Planlegg hverdagsreisene med gange, sykkel eller kollektiv som førstevalg. 
 Korte bilturer kan ofte erstattes av en tur eller elsykkel, som sparer tid i kø og parkering. 
@@ -129,9 +129,9 @@ Små vaneskifter gjennom uken gir stor effekt over året – for både klima, he
     id: "tt-003",
     slug: "spis-mer-plantebasert",
     image: "/ClimateActionImages/spis_mer_plantebasert.jpg",
-    title: "Spis mer plantebasert",
+    title: "Spis plantebasert",
     summary:
-      "Bytt ut noe kjøtt med belgfrukter, korn og grønnsaker. Start med én kjøttfri dag i uka.",
+      "Bytt noe kjøtt med bønner, linser og grønnsaker. Start med én kjøttfri dag og bygg gode, smakfulle vaner over tid.",
     bodyTitle: "Om tiltaket",
     body: `Begynn enkelt med én plantebasert dag i uken, og bygg videre derfra. 
 Bytt ut deler av kjøttet i kjente retter med bønner, linser eller erter for god smak og protein. 
@@ -175,7 +175,7 @@ Planlegg måltider på forhånd og handle inn basisvarer som gjør det lett å l
     image: "/ClimateActionImages/kutt_matsvinn.jpg",
     title: "Kutt matsvinn",
     summary:
-      "Planlegg innkjøp, bruk restemat kreativt og frys ned overskudd. Se og lukt – ikke bare dato.",
+      "Planlegg innkjøp, bruk rester og frys ned overskudd. Tolk datomerking riktig og oppbevar maten smart for mindre svinn.",
     bodyTitle: "Om tiltaket",
     body: `Lag handleliste og planlegg måltider for å unngå impulskjøp som blir liggende. 
 Oppbevar maten riktig og bruk «først inn, først ut». 
@@ -211,9 +211,9 @@ Frys ned brød i skiver og rester i porsjoner, og gjør rester om til nye retter
     id: "tt-005",
     slug: "reparer-og-kjop-brukt",
     image: "/ClimateActionImages/reparer_og_kjop_brukt.jpg",
-    title: "Reparer og kjøp brukt",
+    title: "Kjøp brukt",
     summary:
-      "Forleng levetiden på klær og elektronikk. Kjøp brukt før nytt – og selg videre det du ikke bruker.",
+      "Reparer først, kjøp brukt når du kan og selg videre det du ikke bruker. Forleng levetid og spar både penger og ressurser.",
     bodyTitle: "Om tiltaket",
     body: `Gå gjennom det du eier: kan det fikses, oppgraderes eller brukes videre? 
 Små reparasjoner (knepper, sømmer, batteribytte) forlenger levetiden betraktelig. 
@@ -254,7 +254,7 @@ Velg produkter med mulighet for reservedeler og god garanti når du først må k
     image: "/ClimateActionImages/faerre_flyreiser.jpg",
     title: "Færre flyreiser",
     summary:
-      "Velg tog på kortere strekninger, og slå sammen turer. Når du må fly: bli lengre og reis sjeldnere.",
+      "Velg tog på kortere turer, slå sammen reiser og bli lenger når du må fly. Direkteruter kutter tid og utslipp.",
     bodyTitle: "Om tiltaket",
     body: `Tenk «færre, men bedre» reiser: slå sammen møter, ferier og besøk når det lar seg gjøre. 
 Velg tog eller buss på kortere strekninger, og vurder nattog som komfortabelt alternativ. 
@@ -292,9 +292,9 @@ Planlegg lengre opphold i stedet for mange korte turer, og bruk digitale møter 
     id: "tt-007",
     slug: "isoler-bedre-og-vurder-varmepumpe",
     image: "/ClimateActionImages/isoler_bedre.jpg",
-    title: "Isoler bedre og vurder varmepumpe",
+    title: "Isoler bedre",
     summary:
-      "Tett trekk, oppgrader vinduer og installer varmepumpe der det passer. Store kutt i både utslipp og strømregning.",
+      "Tett trekk, isoler loft og gulv og vurder varmepumpe. Smarte soner og styring gir lavere forbruk og jevnere varme.",
     bodyTitle: "Om tiltaket",
     body: `Start med en enkel tettesjekk og tiltakene som koster minst: tetningslister, tette gjennomføringer og justering av dører/vinduer. 
 Isoler loft og kalde gulv for stor effekt per krone, og vurder energiglass eller varevinduer i trekkfulle rom. 
@@ -328,9 +328,9 @@ En riktig dimensjonert varmepumpe kan redusere forbruket til oppvarming betydeli
     id: "tt-008",
     slug: "produser-eller-kjop-gronn-strom",
     image: "/ClimateActionImages/gronn_strom.jpg",
-    title: "Produser eller kjøp grønn strøm",
+    title: "Grønn strøm",
     summary:
-      "Vurder solceller på taket, smarte styringssystemer og en strømavtale med opprinnelsesgaranti.",
+      "Vurder solceller om mulig, eller velg opprinnelsesgaranti. Styr varmtvann og lading til gunstige timer for lavere fotavtrykk.",
     bodyTitle: "Om tiltaket",
     body: `Har du egnet tak, kan solceller dekke en betydelig del av årsforbruket over tid. 
 Se på takvinkel, skygge og eksisterende elektrisk anlegg for å vurdere potensialet. 
@@ -372,7 +372,7 @@ Uten solceller kan du likevel påvirke: velg en strømavtale med opprinnelsesgar
     image: "/ClimateActionImages/gronn_okonomi.jpg",
     title: "Grønn økonomi",
     summary:
-      "Flytt sparepenger/pensjon til fond og banker med lavt karbonavtrykk. Etterspør bærekraft hos leverandører.",
+      "Flytt sparepenger til løsninger med lavt karbonavtrykk. Etterspør åpne klimamål hos bank og leverandører.",
     bodyTitle: "Om tiltaket",
     body: `Sjekk hvor banken og pensjonsleverandøren din investerer midlene, og vurder alternativer med tydelige klimamål og lavt karbonavtrykk. 
 Se på kostnader, risiko og tidshorisont – endringer må passe økonomien din. 
@@ -412,9 +412,9 @@ Bruk forbrukermakt og velg leverandører som rapporterer åpent om utslipp og mi
     id: "tt-010",
     slug: "engasjer-deg-lokalt",
     image: "/ClimateActionImages/engasjer_deg_lokalt.jpg",
-    title: "Engasjer deg lokalt",
+    title: "Engasjer deg",
     summary:
-      "Delta i nabolagsprosjekter, påvirk beslutningstakere og stem grønt. Sammen får vi større effekt.",
+      "Bli med lokalt: byttegrupper, reparasjonskafé og sykkelprosjekter. Sammen påvirker vi politikken og bygger grønnere nabolag.",
     bodyTitle: "Om tiltaket",
     body: `Bli med i lokale initiativer som nabolagshager, byttegrupper, reparasjonskafeer og sykkelprosjekter. 
 Samarbeid i borettslag om energitiltak, og påvirk kommunen via høringer og valg. 
