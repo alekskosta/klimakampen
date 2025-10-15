@@ -16,6 +16,12 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   line-height: 1.6;
+  background-color: #010514;
+  color: white;
+}
+
+a {
+  color: white;
 }
 
 .link {
@@ -24,10 +30,11 @@ body {
 
 .link:hover {
   text-decoration: underline;
+  color: #b94515;
 }
 
 .link:focus-visible {
-  outline: 2px solid black;
+  outline: 2px solid #b94515;
 }
 
 .page-titles {

@@ -1,9 +1,44 @@
 .footer {
+  position: relative;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2.5rem;
+
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+}
+
+.footerText {
+  position: relative;
+  z-index: 10;
+}
+
+.absolute1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 92%;
+  width: 35%;
+
+  transform: scaleX(-1);
+}
+
+.absolute2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 92%;
+  width: 35%;
+}
+
+@media (max-width: 1024px) {
+  .absolute1 {
+    width: 10%;
+  }
+
+  .absolute2 {
+    width: 10%;
+  }
 }

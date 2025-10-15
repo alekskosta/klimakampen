@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,4 +7,91 @@
   gap: 1.25rem;
   padding: 2.5rem;
   min-height: 100%;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  position: relative;
+  z-index: 10;
+  line-height: 1;
+  text-align: center;
+}
+
+.text {
+  max-width: 798px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.heroLink {
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #b94515;
+  padding: 1rem 2rem;
+}
+
+.heroLink:hover {
+  background-color: #b94515;
+}
+
+.absolute5,
+.absolute6,
+.absolute7,
+.absolute8 {
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    #000 5%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(ellipse at center, #000 5%, transparent 80%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 10% 90%;
+  mask-size: 90% 100%;
+}
+
+.absolute5:hover,
+.absolute6:hover,
+.absolute7:hover,
+.absolute8:hover {
+  filter: brightness(1.5);
+}
+
+.absolute5 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  height: 98%;
+}
+
+.absolute6 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 15%;
+  height: 98%;
+}
+
+.absolute7 {
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  width: 15%;
+  height: 50%;
+}
+
+.absolute8 {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  width: 15%;
+  height: 50%;
+}
+
+@media (max-width: 1089px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
 }

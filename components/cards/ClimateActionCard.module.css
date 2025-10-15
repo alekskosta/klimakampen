@@ -10,5 +10,6 @@
   grid-template-rows: auto 1fr auto;
   gap: 1rem;
   padding: 2.5rem;
-  border: 1px solid black;
+  border: 1px solid #fd1d75;
+  border: 5px solid #082b3f;
 }
