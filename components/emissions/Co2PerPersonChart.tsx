@@ -14,13 +14,16 @@ const data = showCountryInfo();
 const chartConfig = {
   co2PerPerson: {
     label: "CO₂ pr. person (tonn)",
-    color: "#2563eb",
+    color: "#b94515",
   },
 } satisfies ChartConfig;
 
 export default function Co2PerPersonChart() {
   return (
-    <ChartContainer config={chartConfig} className={styles.container}>
+    <ChartContainer
+      config={chartConfig}
+      className={`${styles.container} ${styles.axisWhite}`}
+    >
       <BarChart accessibilityLayer data={data}>
         <CartesianGrid vertical={false} />
         <XAxis
@@ -28,11 +31,19 @@ export default function Co2PerPersonChart() {
           tickLine={false}
           tickMargin={10}
           axisLine={false}
-          tickFormatter={(value) => value.slice(0, 3)}
+          tickFormatter={(value) => value.slice(0, 1)}
+          tick={{ fill: "#fff" }}
         />
-        <ChartTooltip content={<ChartTooltipContent />} />
+        <ChartTooltip
+          content={<ChartTooltipContent className={styles.tooltipWhite} />}
+          cursor={{ fill: "#082b3f" }}
+        />
         <ChartLegend content={<ChartLegendContent />} />
-        <Bar dataKey="co2PerPerson" fill="var(--color-desktop)" radius={4} />
+        <Bar
+          dataKey="co2PerPerson"
+          fill="var(--color-co2PerPerson)"
+          radius={4}
+        />
       </BarChart>
     </ChartContainer>
   );

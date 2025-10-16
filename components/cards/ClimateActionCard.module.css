@@ -11,6 +11,7 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 1.25rem;
+
   padding: 2.5rem;
   border: 5px solid #082b3f;
   background-color: #010514;

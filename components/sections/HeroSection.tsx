@@ -50,7 +50,7 @@ export default function HeroSection() {
         generasjoner.
       </p>
 
-      <Link href="/klimatiltak" className={"buttonLink"}>
+      <Link href="/klimatiltak" className="buttonLink">
         Bli med i kampen
       </Link>
     </section>

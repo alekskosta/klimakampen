@@ -27,7 +27,6 @@ export default async function ClimateActionPage({ params }: Props) {
           className="absolute6"
           aria-hidden="true"
         />
-
         <article className={styles.actionArticle}>
           <header>
             <h1 className="page-titles">{action.title}</h1>
