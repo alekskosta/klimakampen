@@ -36,13 +36,13 @@ export default function CalculatorResultCard({
         <h3>Ditt resultat: {total.toFixed(2)} tonn CO₂e</h3>
         <p>{message}</p>
         <p>
-          Se hva du kan gjøre for å redusere utslippene dine:{" "}
+          Se hva du kan gjøre for å redusere utslippene dine{" "}
           <Link
             href="/klimatiltak"
-            className="link"
+            className="link orange-text"
             aria-label="Les om klimatiltak"
           >
-            Klimatiltak
+            her
           </Link>
           .
         </p>

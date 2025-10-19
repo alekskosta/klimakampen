@@ -58,6 +58,10 @@ a {
   text-decoration: none;
 }
 
+.orange-text {
+  color: #b94515;
+}
+
 .link:hover {
   text-decoration: underline;
   color: #b94515;
