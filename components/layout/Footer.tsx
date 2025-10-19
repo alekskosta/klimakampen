@@ -26,7 +26,7 @@ export default function Footer() {
 
       <div className={styles.footerText}>
         <p>{new Date().getFullYear()} Klimakampen</p>
-        <small> © All rights reserved Aleksander Kostopoulos</small>
+        <small> © All rights reserved</small>
       </div>
     </footer>
   );
