@@ -10,6 +10,7 @@
   background-color: #010514;
   color: white;
   font-size: 0.7rem;
+  min-height: 32rem;
 }
 
 .axisWhite :global(.recharts-cartesian-grid line) {
