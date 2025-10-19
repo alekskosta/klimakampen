@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./HeroSection.module.css";
+import MouseTrail from "../effects/MouseTrail";
 
 export default function HeroSection() {
   return (
     <section aria-labelledby="hero-title" className={styles.hero}>
+      <MouseTrail />
       <Image
         className={styles.absolute5}
         aria-hidden="true"

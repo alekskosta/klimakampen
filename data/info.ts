@@ -521,7 +521,7 @@ export type Question = {
 export const QUESTIONS: Question[] = [
   {
     id: "home",
-    title: "Bolig: strøm/oppvarming",
+    title: "Bolig: strøm",
     defaultIndex: 2,
     options: [
       { label: "Svært lavt (≤ 5 000 kWh)", value: 0.6 },
@@ -569,7 +569,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: "goods",
-    title: "Varer/innkjøp (klær, elektronikk m.m.)",
+    title: "Varer/innkjøp ",
     defaultIndex: 2,
     options: [
       { label: "Svært lavt forbruk", value: 0.3 },

@@ -72,6 +72,7 @@ a {
 .button {
   text-decoration: none;
   background-color: transparent;
+  color: white;
   border: 1px solid #b94515;
   padding: 1rem 2rem;
 }
@@ -79,6 +80,7 @@ a {
 .buttonLink:hover,
 .button:hover {
   background-color: #b94515;
+  cursor: pointer;
 }
 
 .page-titles {
@@ -98,6 +100,7 @@ a {
   margin-inline: auto;
   padding: 0px 2.5rem;
   padding-bottom: 2.5rem;
+  background-color: #010514;
 }
 
 .page-link {
@@ -118,6 +121,7 @@ a {
 .slug-section {
   position: relative;
   min-height: 100%;
+  background-color: #010514;
 }
 
 img {
@@ -151,4 +155,37 @@ img {
     --chart-4: oklch(0.627 0.265 303.9);
     --chart-5: oklch(0.645 0.246 16.439);
   }
+}
+
+@keyframes growAndFade {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 10;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    border-color: blue;
+  }
+}
+
+.mouse-trail-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* blokkér ikke klikk */
+  z-index: 5; /* justér ift. header/innhold */
+}
+
+.mouse-trail-circle {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 90%;
+  border: 0.0625rem solid #b94515;
+  animation: growAndFade 2s ease-out forwards;
 }

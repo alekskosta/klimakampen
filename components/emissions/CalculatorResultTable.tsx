@@ -19,15 +19,15 @@ type Row = {
 export default function CalculatorResultTable({ rows }: { rows: Row[] }) {
   return (
     <Table className={styles.table}>
-      <TableCaption>
+      <TableCaption className={styles.caption}>
         Ditt årlige resultat målt opp mot gjennomsnitts personen i Norge.
       </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead>#</TableHead>
-          <TableHead>Aktivitet</TableHead>
-          <TableHead>Ditt utslipp</TableHead>
-          <TableHead>Gjennomsnitt</TableHead>
+          <TableHead className={styles.head}>#</TableHead>
+          <TableHead className={styles.head}>Aktivitet</TableHead>
+          <TableHead className={styles.head}>Ditt utslipp</TableHead>
+          <TableHead className={styles.head}>Gjennomsnitt</TableHead>
         </TableRow>
       </TableHeader>
 

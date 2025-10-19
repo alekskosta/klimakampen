@@ -24,29 +24,36 @@ export default function CalculatorResultCard({
     message = "Du ligger under snittet";
   }
   return (
-    <section className={styles.card} aria-labelledby="result-title">
-      <h2 id="result-title">Resultat fra klimakalkulatoren</h2>
-      <p>
-        En gjennomsnittlig person i Norge slipper ut omtrent{" "}
-        <strong>8,00 tonn CO₂e</strong> i året.
-      </p>
-      <h3>Ditt resultat: {total.toFixed(2)} tonn CO₂e</h3>
-      <p>{message}</p>
-      <p>
-        Se hva du kan gjøre for å redusere utslippene dine:{" "}
-        <Link
-          href="/klimatiltak"
-          className="link"
-          aria-label="Les om klimatiltak"
-        >
-          Klimatiltak
-        </Link>
-        .
-      </p>
-      <CalculatorResultTable rows={rows} />
-      <button type="button" onClick={onRestart} className="button">
-        Beregn på nytt!
-      </button>
+    <section>
+      <article className={styles.card} aria-labelledby="result-title">
+        <h2 id="result-title" className={styles.calcTitle}>
+          Resultat fra klimakalkulatoren
+        </h2>
+        <p>
+          En gjennomsnittlig person i Norge slipper ut omtrent{" "}
+          <strong>8,00 tonn CO₂e</strong> i året.
+        </p>
+        <h3>Ditt resultat: {total.toFixed(2)} tonn CO₂e</h3>
+        <p>{message}</p>
+        <p>
+          Se hva du kan gjøre for å redusere utslippene dine:{" "}
+          <Link
+            href="/klimatiltak"
+            className="link"
+            aria-label="Les om klimatiltak"
+          >
+            Klimatiltak
+          </Link>
+          .
+        </p>
+      </article>
+
+      <section>
+        <CalculatorResultTable rows={rows} />
+        <button type="button" onClick={onRestart} className="button">
+          Beregn på nytt!
+        </button>
+      </section>
     </section>
   );
 }

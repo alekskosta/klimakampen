@@ -16,12 +16,14 @@ export default function KlimaVerstinger() {
         src="./ClimateImage/coldthree.png"
         className="absolute5"
         aria-hidden="true"
+        alt=""
       />
 
       <img
         src="./ClimateImage/coldthree.png"
         className="absolute6"
         aria-hidden="true"
+        alt=""
       />
       <h1 className="page-titles">Info om klima-verstinger</h1>
       <p className="text">

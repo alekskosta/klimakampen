@@ -1,6 +1,19 @@
 .card {
+  position: relative;
+  z-index: 10;
   max-width: 798px;
+  background-color: #010514;
   margin-inline: auto;
   padding: 2.5rem;
-  border: 1px solid #fd1d75;
+  border: 5px solid #082b3f;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.calcTitle {
+  text-decoration: underline;
+  text-decoration-color: #b94515;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }

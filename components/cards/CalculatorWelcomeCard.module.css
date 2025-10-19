@@ -1,6 +1,19 @@
 .welcome {
+  position: relative;
+  z-index: 20;
   max-width: 798px;
   margin-inline: auto;
-  border: 1px solid #fd1d75;
+  border: 5px solid #082b3f;
   padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #010514;
+}
+
+.calcTitle {
+  text-decoration: underline;
+  text-decoration-color: #b94515;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }

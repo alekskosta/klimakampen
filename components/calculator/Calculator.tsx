@@ -4,6 +4,7 @@ import styles from "./Calculator.module.css";
 import CalculatorResultCard from "../cards/CalculatorResultCard";
 import CalculatorWelcomeCard from "../cards/CalculatorWelcomeCard";
 import { useCalc, useHydration } from "@/lib/calculator/hooks";
+import Link from "next/link";
 
 export default function Calculator() {
   const {
@@ -56,11 +57,17 @@ export default function Calculator() {
       }}
       className={styles.form}
     >
-      <p>
-        Spørsmål {step + 1} / {QUESTIONS.length}
-      </p>
+      <div className={styles.questionDiv}>
+        <p>
+          Spørsmål {step + 1} / {QUESTIONS.length}
+        </p>
 
-      <h2>{question.title}</h2>
+        <button className={styles.stopCalcBtn} type="button" onClick={restart}>
+          Avslutt beregning
+        </button>
+      </div>
+
+      <h2 className={styles.formTitle}>{question.title}</h2>
       <fieldset className={styles.group}>
         <legend className="sr-only">{question.title}</legend>
 
@@ -79,10 +86,15 @@ export default function Calculator() {
       </fieldset>
 
       <div className={styles.btnAndText}>
-        <button type="button" onClick={prev} disabled={first}>
-          Forrige
+        {!first && (
+          <button type="button" className="buttonLink" onClick={prev}>
+            Forrige
+          </button>
+        )}
+
+        <button type="submit" className="buttonLink">
+          {last ? "Vis resultat" : "Neste"}
         </button>
-        <button type="submit">{last ? "Vis resultat" : "Neste"}</button>
       </div>
       <span aria-live="polite" role="status">
         Ditt forbruk nå: {totalProgress().toFixed(2)} t CO₂e/år
