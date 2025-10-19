@@ -557,14 +557,14 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: "diet",
-    title: "Kosthold (kjøttmåltider per uke)",
+    title: "Kosthold",
     defaultIndex: 2,
     options: [
-      { label: "0 (vegan/vegetar)", value: 0.8 },
-      { label: "1–2 (mest plantebasert)", value: 1.2 },
-      { label: "3–4 (blandet kosthold)", value: 1.7 }, // default
-      { label: "5–6 (ofte kjøtt)", value: 2.1 },
-      { label: "7+ (daglig)", value: 2.6 },
+      { label: "Vegan/vegetar", value: 0.8 },
+      { label: "Mest plantebasert", value: 1.2 },
+      { label: "Blandet kosthold", value: 1.7 }, // default
+      { label: "Ofte kjøtt", value: 2.1 },
+      { label: "Daglig kjøtt", value: 2.6 },
     ],
   },
   {
@@ -581,7 +581,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: "services",
-    title: "Digitale tjenester (strømming, skylagring, apper)",
+    title: "Digitale tjenester",
     defaultIndex: 2,
     options: [
       { label: "Under 100 kr/mnd", value: 0.2 },
@@ -593,7 +593,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: "waste",
-    title: "Avfall & gjenbruk (restavfall per uke)",
+    title: "Avfall",
     defaultIndex: 2,
     options: [
       { label: "≤ 1 pose/uke", value: 0.05 },
