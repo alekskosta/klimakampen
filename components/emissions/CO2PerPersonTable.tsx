@@ -17,7 +17,7 @@ export default function CO2PerPersonTable() {
     (a, b) => b.co2PerPerson - a.co2PerPerson
   );
   return (
-    <Table className={styles.table}>
+    <Table className={styles.table} id="emissions">
       <TableCaption>CO₂ per innbygger (tonn) – topp 20 (2023)</TableCaption>
       <TableHeader>
         <TableRow>

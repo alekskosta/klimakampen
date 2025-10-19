@@ -23,6 +23,7 @@ export default function Co2PerPersonChart() {
     <ChartContainer
       config={chartConfig}
       className={`${styles.container} ${styles.axisWhite}`}
+      id="emissions"
     >
       <BarChart accessibilityLayer data={data}>
         <CartesianGrid vertical={false} />

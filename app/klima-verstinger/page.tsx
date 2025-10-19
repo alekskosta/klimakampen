@@ -44,7 +44,10 @@ export default function KlimaVerstinger() {
         className="button"
         onClick={() => {
           toggleShow();
-          window.scrollTo({ top: 0, behavior: "smooth" });
+          document.getElementById("klima-verstinger-top")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }}
       >
         {show ? "Vis graf" : "Vis tabell"}
