@@ -50,7 +50,14 @@ export default function CalculatorResultCard({
 
       <section>
         <CalculatorResultTable rows={rows} />
-        <button type="button" onClick={onRestart} className="button">
+        <button
+          type="button"
+          onClick={() => {
+            onRestart();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="button"
+        >
           Beregn på nytt!
         </button>
       </section>
