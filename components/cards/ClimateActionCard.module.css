@@ -26,6 +26,6 @@
 
 .climateImage {
   border-radius: 50%;
-  width: clamp(200px, 25vw, 260px);
-  height: clamp(200x, 25vw, 260px);
+  width: clamp(160px, 25vw, 200px);
+  height: clamp(160px, 25vw, 200px);
 }
