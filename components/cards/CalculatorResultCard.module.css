@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  min-height: 20rem;
 }
 
 .calcTitle {

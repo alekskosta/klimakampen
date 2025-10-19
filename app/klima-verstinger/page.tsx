@@ -39,7 +39,14 @@ export default function KlimaVerstinger() {
       </p>
 
       {show ? <CO2PerPersonTable /> : <Co2PerPersonChart />}
-      <button type="button" className="button" onClick={() => toggleShow()}>
+      <button
+        type="button"
+        className="button"
+        onClick={() => {
+          toggleShow();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
         {show ? "Vis graf" : "Vis tabell"}
       </button>
     </section>
