@@ -98,8 +98,10 @@ a {
   z-index: 20;
   max-width: 798px;
   margin-inline: auto;
-  padding: 0px 2.5rem;
-  padding-bottom: 2.5rem;
+  padding: 2.5rem;
+  border-top: 5px solid #082b3f;
+  border-left: 5px solid #082b3f;
+  border-right: 5px solid #082b3f;
   background-color: #010514;
 }
 
@@ -188,4 +190,10 @@ img {
   border-radius: 90%;
   border: 0.0625rem solid #b94515;
   animation: growAndFade 2s ease-out forwards;
+}
+
+@media (max-width: 700px) {
+  .climateSection {
+    padding: 0;
+  }
 }
