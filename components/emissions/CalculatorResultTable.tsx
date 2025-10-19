@@ -37,9 +37,7 @@ export default function CalculatorResultTable({ rows }: { rows: Row[] }) {
             <TableCell>{i + 1}</TableCell>
             <TableCell>{row.activity}</TableCell>
             <TableCell
-              className={
-                row.userValue <= row.avgValue ? styles.green : styles.red
-              }
+              className={row.userValue <= row.avgValue ? "green" : "red"}
             >
               {row.userValue.toFixed(2)} <small>t CO₂e</small>{" "}
             </TableCell>

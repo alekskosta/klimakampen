@@ -1,9 +1,118 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
+:root {
+  --color-bg: #010514;
+  --color-border: #082b3f;
+  --color-btnBorderUnderlineLink: #b94515;
+  --color-text: white;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+}
+
+.orange-text {
+  color: var(--color-btnBorderUnderlineLink);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--color-btnBorderUnderlineLink);
+}
+
+.link:focus-visible,
+.buttonLink:focus-visible {
+  outline: 2px solid var(--color-btnBorderUnderlineLink);
+}
+
+.buttonLink,
+.button {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-btnBorderUnderlineLink);
+  padding: 1rem 2rem;
+}
+
+.button {
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.buttonLink:hover,
+.button:hover {
+  background-color: var(--color-btnBorderUnderlineLink);
+  cursor: pointer;
+}
+
+.page-titles {
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-decoration-color: var(--color-btnBorderUnderlineLink);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.page-link {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.text {
+  position: relative;
+  z-index: 20;
+  max-width: 798px;
+  margin-inline: auto;
+  padding: 2.5rem;
+  border-top: 5px solid var(--color-border);
+  border-left: 5px solid var(--color-border);
+  border-right: 5px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.climateSection {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2.5rem;
+}
+
+.climate-worst,
+.climate-calc,
+.climateSection,
+.slug-section {
+  position: relative;
+  min-height: 100%;
+  background-color: var(--color-bg);
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .absolute5,
@@ -35,114 +144,12 @@
   filter: sepia(4.6) saturate(10.2) hue-rotate(-15deg) brightness(1.05);
 }
 
-html,
-body {
-  height: 100%;
+.red {
+  color: red;
 }
 
-body {
-  min-height: 100svh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  line-height: 1.6;
-  background-color: #010514;
-
-  color: white;
-}
-
-a {
-  color: white;
-}
-
-.link {
-  text-decoration: none;
-}
-
-.orange-text {
-  color: #b94515;
-}
-
-.link:hover {
-  text-decoration: underline;
-  color: #b94515;
-}
-
-.link:focus-visible,
-.buttonLink:focus-visible {
-  outline: 2px solid #b94515;
-}
-
-.buttonLink,
-.button {
-  text-decoration: none;
-  background-color: transparent;
-  color: white;
-  border: 1px solid #b94515;
-  padding: 1rem 2rem;
-}
-
-.buttonLink:hover,
-.button:hover {
-  background-color: #b94515;
-  cursor: pointer;
-}
-
-.page-titles {
-  padding: 2.5rem;
-  text-align: center;
-  font-size: 2rem;
-  text-decoration: underline;
-  text-decoration-color: #b94515;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
-.text {
-  position: relative;
-  z-index: 20;
-  max-width: 798px;
-  margin-inline: auto;
-  padding: 2.5rem;
-  border-top: 5px solid #082b3f;
-  border-left: 5px solid #082b3f;
-  border-right: 5px solid #082b3f;
-  background-color: #010514;
-}
-
-.page-link {
-  display: block;
-  width: max-content;
-  margin: 0 auto;
-}
-
-.climateSection {
-  display: flex;
-  flex-direction: column;
-  padding: 0 2.5rem;
-}
-
-.climate-worst,
-.climate-calc,
-.climateSection,
-.slug-section {
-  position: relative;
-  min-height: 100%;
-  background-color: #010514;
-}
-
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.button {
-  display: block;
-  margin-inline: auto;
-
-  margin-bottom: 2.5rem;
-  margin-top: 2.5rem;
-  color: white;
+.green {
+  color: lightgreen;
 }
 
 @layer base {
@@ -183,8 +190,8 @@ img {
 .mouse-trail-layer {
   position: fixed;
   inset: 0;
-  pointer-events: none; /* blokkér ikke klikk */
-  z-index: 5; /* justér ift. header/innhold */
+  pointer-events: none;
+  z-index: 5;
 }
 
 .mouse-trail-circle {
@@ -192,7 +199,7 @@ img {
   width: 12rem;
   height: 12rem;
   border-radius: 90%;
-  border: 0.0625rem solid #b94515;
+  border: 0.0625rem solid var(--color-btnBorderUnderlineLink);
   animation: growAndFade 2s ease-out forwards;
 }
 

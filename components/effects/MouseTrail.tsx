@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
+// Hentet fra Gløer sin undervisning
+
 type Circle = { id: number; x: number; y: number };
 
 const MAX_CIRCLES = 60;

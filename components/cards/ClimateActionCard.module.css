@@ -11,15 +11,14 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   gap: 1.25rem;
-
   padding: 2.5rem;
-  border: 5px solid #082b3f;
-  background-color: #010514;
+  border: 5px solid var(--color-border);
+  background-color: var(--color-bg);
 }
 
 .climateTitle {
   text-decoration: underline;
-  text-decoration-color: #b94515;
+  text-decoration-color: var(--color-btnBorderUnderlineLink);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }

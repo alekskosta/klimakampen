@@ -15,12 +15,14 @@ export default function Klimatiltak() {
         src="./ClimateImage/coldthree.png"
         className="absolute5"
         aria-hidden="true"
+        alt=""
       />
 
       <img
         src="./ClimateImage/coldthree.png"
         className="absolute6"
         aria-hidden="true"
+        alt=""
       />
       <h1 className="page-titles">Klimatiltak</h1>
       <ClimateActionCard items={data} />

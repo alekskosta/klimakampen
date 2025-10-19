@@ -557,14 +557,14 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: "diet",
-    title: "Kosthold",
+    title: "Kosthold (kjøttmåltider per uke)",
     defaultIndex: 2,
     options: [
-      { label: "Vegan / mest plantebasert", value: 0.8 },
-      { label: "Mye plantebasert", value: 1.2 },
-      { label: "Gjennomsnitt", value: 1.7 }, // default
-      { label: "Mye kjøtt", value: 2.1 },
-      { label: "Svært kjøttrikt", value: 2.6 },
+      { label: "0 (vegan/vegetar)", value: 0.8 },
+      { label: "1–2 (mest plantebasert)", value: 1.2 },
+      { label: "3–4 (blandet kosthold)", value: 1.7 }, // default
+      { label: "5–6 (ofte kjøtt)", value: 2.1 },
+      { label: "7+ (daglig)", value: 2.6 },
     ],
   },
   {
@@ -572,35 +572,35 @@ export const QUESTIONS: Question[] = [
     title: "Varer/innkjøp ",
     defaultIndex: 2,
     options: [
-      { label: "Svært lavt forbruk", value: 0.3 },
-      { label: "Lavt forbruk", value: 0.6 },
-      { label: "Middels", value: 0.9 }, // default
-      { label: "Høyt", value: 1.1 },
-      { label: "Svært høyt", value: 1.5 },
+      { label: "Under 500 kr/mnd", value: 0.3 },
+      { label: "500–1 500 kr/mnd", value: 0.6 },
+      { label: "1 500–3 000 kr/mnd", value: 0.9 }, // default
+      { label: "3 000–5 000 kr/mnd", value: 1.1 },
+      { label: "Over 5 000 kr/mnd", value: 1.5 },
     ],
   },
   {
     id: "services",
-    title: "Tjenester & digitalt",
+    title: "Digitale tjenester (strømming, skylagring, apper)",
     defaultIndex: 2,
     options: [
-      { label: "Svært lavt", value: 0.2 },
-      { label: "Lavt", value: 0.4 },
-      { label: "Middels", value: 0.6 }, // default
-      { label: "Høyt", value: 0.8 },
-      { label: "Svært høyt", value: 1.0 },
+      { label: "Under 100 kr/mnd", value: 0.2 },
+      { label: "100–300 kr/mnd", value: 0.4 },
+      { label: "300–600 kr/mnd", value: 0.6 }, // default
+      { label: "600–1 000 kr/mnd", value: 0.8 },
+      { label: "Over 1 000 kr/mnd", value: 1.0 },
     ],
   },
   {
     id: "waste",
-    title: "Avfall & gjenbruk",
+    title: "Avfall & gjenbruk (restavfall per uke)",
     defaultIndex: 2,
     options: [
-      { label: "Nesten null / svært bevisst", value: 0.05 },
-      { label: "Lavt (god sortering/gjenbruk)", value: 0.2 },
-      { label: "Vanlig", value: 0.3 }, // default
-      { label: "Høyt avfall", value: 0.4 },
-      { label: "Svært høyt avfall", value: 0.6 },
+      { label: "≤ 1 pose/uke", value: 0.05 },
+      { label: "1–2 poser/uke", value: 0.2 },
+      { label: "2–3 poser/uke", value: 0.3 }, // default
+      { label: "3–4 poser/uke", value: 0.4 },
+      { label: "≥ 5 poser/uke", value: 0.6 },
     ],
   },
 ];

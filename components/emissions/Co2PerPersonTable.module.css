@@ -1,14 +1,9 @@
 .table {
-  border: 5px solid #082b3f;
+  border: 5px solid var(--color-border);
   padding: 2.5rem;
   max-width: 798px;
   margin-inline: auto;
   font-size: 0.7rem;
-  background-color: #010514;
+  background-color: var(--color-bg);
   min-height: 32rem;
-}
-
-.head {
-  border-bottom: 1px solid black;
-  border-collapse: collapse;
 }

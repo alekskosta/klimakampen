@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./HeroSection.module.css";
 import MouseTrail from "../effects/MouseTrail";
 
@@ -7,40 +6,32 @@ export default function HeroSection() {
   return (
     <section aria-labelledby="hero-title" className={styles.hero}>
       <MouseTrail />
-      <Image
+      <img
         className={styles.absolute5}
         aria-hidden="true"
         src="/ClimateImage/coldThree.png"
         alt=""
-        width={300}
-        height={900}
       />
 
-      <Image
+      <img
         className={styles.absolute6}
         aria-hidden="true"
         src="/ClimateImage/warmthThreeFour.png"
         alt=""
-        width={300}
-        height={900}
       />
 
-      <Image
+      <img
         className={styles.absolute7}
         aria-hidden="true"
         src="/ClimateImage/coldThree.png"
         alt=""
-        width={300}
-        height={900}
       />
 
-      <Image
+      <img
         className={styles.absolute8}
         aria-hidden="true"
         src="/ClimateImage/warmthThreeFour.png"
         alt=""
-        width={300}
-        height={900}
       />
 
       <h1 id="hero-title" className={styles.heroTitle}>

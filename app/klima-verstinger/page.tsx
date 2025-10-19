@@ -1,15 +1,13 @@
-"use client";
+import { Metadata } from "next";
+import Switcher from "./_components/Switcher";
 
-import Co2PerPersonChart from "@/components/emissions/Co2PerPersonChart";
-import CO2PerPersonTable from "@/components/emissions/CO2PerPersonTable";
-import { useState } from "react";
+export const metadata: Metadata = {
+  title: "Klima-verstinger – CO₂ per innbygger (topp 20) | Klimakampen",
+  description:
+    "Se oversikt over landene med høyest CO₂-utslipp per innbygger (topp 20). Bytt mellom tabell og graf og utforsk tallene.",
+};
 
 export default function KlimaVerstinger() {
-  const [show, setShow] = useState<boolean>(true);
-
-  function toggleShow() {
-    setShow((prev) => !prev);
-  }
   return (
     <section className="climate-worst">
       <img
@@ -38,10 +36,7 @@ export default function KlimaVerstinger() {
         enkeltpersoner.
       </p>
 
-      {show ? <CO2PerPersonTable /> : <Co2PerPersonChart />}
-      <button type="button" className="button" onClick={() => toggleShow()}>
-        {show ? "Vis graf" : "Vis tabell"}
-      </button>
+      <Switcher />
     </section>
   );
 }

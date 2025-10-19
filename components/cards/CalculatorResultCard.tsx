@@ -33,8 +33,12 @@ export default function CalculatorResultCard({
           En gjennomsnittlig person i Norge slipper ut omtrent{" "}
           <strong>8,00 tonn CO₂e</strong> i året.
         </p>
-        <h3>Ditt resultat: {total.toFixed(2)} tonn CO₂e</h3>
-        <p>{message}</p>
+        <h3>
+          Ditt resultat:{" "}
+          <span className={styles.climateEmissions}>{total.toFixed(2)}</span>{" "}
+          tonn CO₂e
+        </h3>
+        <p className={total <= 8.0 ? "green" : "red"}>{message}</p>
         <p>
           Se hva du kan gjøre for å redusere utslippene dine{" "}
           <Link

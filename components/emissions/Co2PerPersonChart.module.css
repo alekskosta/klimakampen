@@ -3,24 +3,24 @@
   z-index: 20;
   height: 260px;
   width: 100%;
-  border: 5px solid #082b3f;
+  border: 5px solid var(--color-border);
   padding: 2.5rem;
   max-width: 798px;
   margin-inline: auto;
-  background-color: #010514;
-  color: white;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-size: 0.7rem;
   min-height: 32rem;
 }
 
 .axisWhite :global(.recharts-cartesian-grid line) {
-  stroke: #082b3f;
+  stroke: var(--color-border);
 }
 
 .tooltipWhite {
   padding: 1.25rem;
   min-width: 10rem;
-  background-color: #010514;
+  background-color: var(--color-bg);
 }
 
 @media (min-width: 768px) {

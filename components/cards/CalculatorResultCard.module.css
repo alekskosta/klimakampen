@@ -2,18 +2,19 @@
   position: relative;
   z-index: 10;
   max-width: 798px;
-  background-color: #010514;
+  background-color: var(--color-bg);
   margin-inline: auto;
   padding: 2.5rem;
-  border: 5px solid #082b3f;
+  border: 5px solid var(--color-border);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
 
-.calcTitle {
+.calcTitle,
+.climateEmissions {
   text-decoration: underline;
-  text-decoration-color: #b94515;
+  text-decoration-color: var(--color-btnBorderUnderlineLink);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }

@@ -3,16 +3,16 @@
   z-index: 10;
   max-width: 798px;
   margin-inline: auto;
-  border: 5px solid #082b3f;
+  border: 5px solid var(--color-border);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  background-color: #010514;
+  background-color: var(--color-bg);
 }
 
 .group {
-  border: 1px solid #082b3f;
+  border: 1px solid var(--color-border);
 }
 
 .label {
@@ -24,13 +24,13 @@
 
 .formTitle {
   text-decoration: underline;
-  text-decoration-color: #b94515;
+  text-decoration-color: var(--color-btnBorderUnderlineLink);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
 .label:hover {
-  background-color: #082b3f;
+  background-color: var(--color-border);
 }
 
 .btnAndText {
@@ -47,7 +47,7 @@
 
 .stopCalcBtn {
   background-color: transparent;
-  color: #b94515;
+  color: var(--color-btnBorderUnderlineLink);
   border: none;
   cursor: pointer;
 }

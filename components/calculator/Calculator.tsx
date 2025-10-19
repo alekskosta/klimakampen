@@ -4,7 +4,6 @@ import styles from "./Calculator.module.css";
 import CalculatorResultCard from "../cards/CalculatorResultCard";
 import CalculatorWelcomeCard from "../cards/CalculatorWelcomeCard";
 import { useCalc, useHydration } from "@/lib/calculator/hooks";
-import Link from "next/link";
 
 export default function Calculator() {
   const {
