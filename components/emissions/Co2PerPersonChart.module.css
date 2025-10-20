@@ -28,3 +28,9 @@
     height: 320px;
   }
 }
+
+@media (max-width: 350px) {
+  .container {
+    font-size: 0.5rem;
+  }
+}

@@ -7,3 +7,9 @@
   background-color: var(--color-bg);
   min-height: 32rem;
 }
+
+@media (max-width: 350px) {
+  .table {
+    font-size: 0.5rem;
+  }
+}
