@@ -17,14 +17,14 @@ export default async function ClimateActionPage({ params }: Props) {
     return (
       <section className={"slug-section"}>
         <img
-          src="/ClimateImage/coldthree.png"
+          src="/ClimateImage/coldThree.png"
           alt=""
           className="absolute5"
           aria-hidden="true"
         />
 
         <img
-          src="/ClimateImage/coldthree.png"
+          src="/ClimateImage/coldThree.png"
           alt=""
           className="absolute6"
           aria-hidden="true"

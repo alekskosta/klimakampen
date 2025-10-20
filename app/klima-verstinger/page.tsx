@@ -11,14 +11,14 @@ export default function KlimaVerstinger() {
   return (
     <section className="climate-worst">
       <img
-        src="./ClimateImage/coldthree.png"
+        src="./ClimateImage/coldThree.png"
         className="absolute5"
         aria-hidden="true"
         alt=""
       />
 
       <img
-        src="./ClimateImage/coldthree.png"
+        src="./ClimateImage/coldThree.png"
         className="absolute6"
         aria-hidden="true"
         alt=""
