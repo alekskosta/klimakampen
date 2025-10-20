@@ -1,5 +1,5 @@
+import Switcher from "@/components/emissions/Switcher";
 import { Metadata } from "next";
-import Switcher from "./_components/Switcher";
 
 export const metadata: Metadata = {
   title: "Klima-verstinger – CO₂ per innbygger (topp 20) | Klimakampen",

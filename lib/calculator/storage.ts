@@ -6,7 +6,7 @@ import {
   type AnswerId,
   type DefaultAnswers,
 } from "@/data/info";
-import { calcFinalTotal, calcTotal, TouchedMap } from "./climateCalc";
+import { calcFinalTotal, calcNowTotal, TouchedMap } from "./climateCalc";
 
 type State = {
   step: number;
@@ -41,7 +41,7 @@ export const useCalcStore = create<State & Derived & Action>()(
 
       currentId: () => QUESTIONS[get().step].id,
       totalProgress: () =>
-        calcTotal(get().ans, get().touched, get().currentId()),
+        calcNowTotal(get().ans, get().touched, get().currentId()),
       totalFinal: () => calcFinalTotal(get().ans),
 
       choose: (id, value) =>

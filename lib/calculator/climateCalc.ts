@@ -7,7 +7,7 @@ export function calcFinalTotal(ans: DefaultAnswers) {
   return Math.round(sum * 100) / 100;
 }
 
-export function calcTotal(
+export function calcNowTotal(
   ans: DefaultAnswers,
   touched: TouchedMap,
   currentId: AnswerId
